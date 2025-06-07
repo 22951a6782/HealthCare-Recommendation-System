@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedConsult - Professional Healthcare Recommendations</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        :root {
+            --primary: #14537d;
+            --secondary: #6c757d;
+            --accent: #2c7da0;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --border: #dee2e6;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: normal;
+        }
+        
+        .top-header {
+            background-color: var(--primary);
+            color: white;
+            font-size: 0.9rem;
+            padding: 5px 0;
+        }
+        
+        .top-header a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 15px 0;
+        }
+        
+        .navbar-brand {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary) !important;
+        }
+        
+        .nav-link {
+            color: var(--dark) !important;
+            font-weight: 500;
+            padding: 0.5rem 1rem !important;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary) !important;
+        }
+        
+        .main-section {
+            background-color: white;
+            padding: 4rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .main-title {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .main-subtitle {
+            font-size: 1.1rem;
+            color: var(--secondary);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        
+        .btn-custom-primary {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            font-family: 'Arial', sans-serif;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-custom-primary:hover {
+            background-color: #0d3c5a;
+            color: white;
+        }
+        
+        .btn-custom-secondary {
+            background-color: white;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+            padding: 10px 25px;
+            font-family: 'Arial', sans-serif;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-custom-secondary:hover {
+            background-color: #f0f5f9;
+            color: #0d3c5a;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary);
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background-color: var(--primary);
+        }
+        
+        .feature-box {
+            background-color: white;
+            padding: 2rem;
+            border: 1px solid var(--border);
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-box:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .feature-icon {
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        .testimonial-section {
+            background-color: #f0f5f9;
+            padding: 4rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .testimonial-box {
+            background-color: white;
+            padding: 2rem;
+            border: 1px solid var(--border);
+            font-style: italic;
+            position: relative;
+        }
+        
+        .testimonial-box:before {
+            content: '\201C';
+            font-size: 4rem;
+            position: absolute;
+            top: -20px;
+            left: 10px;
+            color: #e9ecef;
+            font-family: Georgia, serif;
+        }
+        
+        .signature {
+            font-style: normal;
+            font-weight: 600;
+            color: var(--dark);
+            margin-top: 1rem;
+        }
+        
+        .credential {
+            font-style: normal;
+            color: var(--secondary);
+            font-size: 0.9rem;
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 3rem 0 2rem;
+            font-size: 0.9rem;
+        }
+        
+        .footer-title {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        footer a {
+            color: #a3c9e3;
+            transition: all 0.3s ease;
+        }
+        
+        footer a:hover {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .footer-link {
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .footer-contact i {
+            width: 20px;
+            margin-right: 10px;
+            color: #a3c9e3;
+        }
+        
+        .copyright {
+            background-color: #1a252f;
+            color: #ecf0f1;
+            padding: 1.5rem 0;
+            font-size: 0.85rem;
+        }
+        
+        .cert-badge {
+            width: 80px;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 36px;
+            margin-right: 10px;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--accent);
+        }
+        
+        .cta-section {
+            background-color: white;
+            padding: 4rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .doctors-img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Header -->
+    <div class="top-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <span><i class="fas fa-phone-alt mr-2"></i>+1 (555) 123-4567</span>
+                    <span class="ml-3"><i class="fas fa-envelope mr-2"></i>contact@medconsult.org</span>
+                </div>
+                <div class="col-md-6 text-right">
+                    <a href="#" class="mr-3"><i class="fas fa-question-circle mr-1"></i>Help</a>
+                    <a href="#"><i class="fas fa-info-circle mr-1"></i>About Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="/">MedConsult</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Practitioners</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Section -->
+    <section class="main-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="main-title">Professional Healthcare Recommendations Tailored to Your Needs</h1>
+                    <p class="main-subtitle">MedConsult connects qualified healthcare professionals with patients seeking personalized medical advice and recommendations. Our platform ensures secure, confidential, and expert healthcare guidance.</p>
+                    <div class="mt-4">
+                        <a href="/doctor_login" class="btn btn-custom-primary mr-3">Healthcare Provider Portal</a>
+                        <a href="/login" class="btn btn-custom-secondary">Patient Access</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center mt-4 mt-lg-0">
+                    <img src="online-doctor-consultation-illustration_88138-414.avif" alt="Doctor consultation" class="doctors-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title">Our Professional Services</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-box text-center">
+                        <i class="fas fa-user-md feature-icon"></i>
+                        <h3 class="feature-title">Expert Medical Advice</h3>
+                        <p>Access to board-certified physicians and specialists who provide evidence-based recommendations for your health concerns.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box text-center">
+                        <i class="fas fa-lock feature-icon"></i>
+                        <h3 class="feature-title">Secure & Confidential</h3>
+                        <p>Your medical information and consultations are protected by advanced encryption and strict privacy protocols.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box text-center">
+                        <i class="fas fa-file-medical-alt feature-icon"></i>
+                        <h3 class="feature-title">Comprehensive Records</h3>
+                        <p>Maintain detailed health records and recommendation history accessible anytime through your secure patient portal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial-section">
+        <div class="container">
+            <h2 class="section-title">Trusted by Healthcare Professionals</h2>
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="testimonial-box">
+                        <p>"MedConsult has transformed my practice by allowing me to provide consistent follow-up care and recommendations to patients. The platform's professional interface and secure communication channels have significantly improved patient outcomes and satisfaction."</p>
+                        <p class="signature">— Dr. Robert Anderson</p>
+                        <p class="credential">Chief of Internal Medicine, Memorial Medical Center</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2 text-center">
+                    <h2 class="section-title">Join Our Healthcare Network</h2>
+                    <p class="mb-4">Whether you're a healthcare provider looking to expand your practice or a patient seeking expert medical recommendations, MedConsult provides the professional platform you need.</p>
+                    <div>
+                        <a href="/doctor_login" class="btn btn-custom-primary mr-3">Provider Registration</a>
+                        <a href="/login" class="btn btn-custom-secondary">Patient Registration</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="footer-title">MedConsult</h5>
+                    <p>Providing professional healthcare recommendations and guidance through our secure, HIPAA-compliant platform.</p>
+                    <div class="mt-3">
+                        <img src="/api/placeholder/80/40" alt="HIPAA Compliant" class="cert-badge">
+                        <img src="/api/placeholder/80/40" alt="SSL Secure" class="cert-badge ml-2">
+                    </div>
+                    <div class="social-links mt-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5 class="footer-title">Company</h5>
+                    <a href="#" class="footer-link">About Us</a>
+                    <a href="#" class="footer-link">Our Team</a>
+                    <a href="#" class="footer-link">Careers</a>
+                    <a href="#" class="footer-link">Press</a>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="footer-title">Resources</h5>
+                    <a href="#" class="footer-link">Health Articles</a>
+                    <a href="#" class="footer-link">Provider Directory</a>
+                    <a href="#" class="footer-link">FAQ</a>
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                    <a href="#" class="footer-link">Terms of Service</a>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="footer-title">Contact Us</h5>
+                    <p class="footer-contact"><i class="fas fa-map-marker-alt"></i> 123 Medical Center Blvd.<br>Suite 400<br>Boston, MA 02115</p>
+                    <p class="footer-contact"><i class="fas fa-phone-alt"></i> +1 (555) 123-4567</p>
+                    <p class="footer-contact"><i class="fas fa-envelope"></i> contact@medconsult.org</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    &copy; 2025 MedConsult. All rights reserved.
+                </div>
+                <div class="col-md-6 text-right">
+                    <small>Designed for healthcare professionals and patients.</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

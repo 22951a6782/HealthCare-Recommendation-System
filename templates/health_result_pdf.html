@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Health Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        h2 { color: #333; }
+        h3 { margin-top: 20px; color: #555; }
+        ul { padding-left: 20px; }
+    </style>
+</head>
+<body>
+    <h2>Health Check Report</h2>
+
+    <p><strong>Age:</strong> {{ age }}</p>
+    <p><strong>Blood Pressure:</strong> {{ bp }} (Ideal: {{ ideal_bp[0] }}-{{ ideal_bp[1] }})</p>
+    <p><strong>Heart Rate:</strong> {{ heart }} (Ideal: {{ ideal_heart[0] }}-{{ ideal_heart[1] }})</p>
+    <p><strong>Stress Level:</strong> {{ stress }}/10</p>
+    <p><strong>Exercise Time:</strong> {{ exercise }} min (Ideal: {{ ideal_exercise }} min)</p>
+    <p><strong>Sleep Time:</strong> {{ sleep }} hrs (Ideal: {{ ideal_sleep[0] }}-{{ ideal_sleep[1] }} hrs)</p>
+
+    {% if risks %}
+    <h3>Detected Risks:</h3>
+    <ul>
+        {% for risk in risks %}
+        <li>{{ risk }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    {% if symptoms %}
+    <h3>Possible Symptoms:</h3>
+    <ul>
+        {% for symptom in symptoms %}
+        <li>{{ symptom }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    {% if tips %}
+    <h3>Personalized Tips:</h3>
+    {% for category, tip_list in tips.items() %}
+    <p><strong>{{ category }}:</strong></p>
+    <ul>
+        {% for tip in tip_list %}
+        <li>{{ tip }}</li>
+        {% endfor %}
+    </ul>
+    {% endfor %}
+    {% endif %}
+    
+
+</body>
+</html>
