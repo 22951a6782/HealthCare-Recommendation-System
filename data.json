@@ -1,0 +1,448 @@
+{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": [
+                "Hi there", 
+                "Hello", 
+                "Hey",  
+                "Good day", 
+                "Greetings", 
+                "What's up?", 
+                "Hi!", 
+                "Hello there", 
+                "Howdy"
+            ],
+            "responses": [
+                "Hello! How can I assist you today?", 
+                "Hi there! How can I help?", 
+                "Hello, thanks for asking!", 
+                "Welcome! What can I do for you?", 
+                "Great to see you! How may I help?",
+                "Hi! I'm ready to assist you.",
+                "Greetings! How can I support you today?"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": [
+                "Bye", 
+                "See you later", 
+                "Goodbye", 
+                "Take care", 
+                "Till next time",
+                "Catch you later",
+                "Bye bye",
+                "Talk to you later",
+                "Gotta go",
+                "I'm done"
+            ],
+            "responses": [
+                "Goodbye! Take care!", 
+                "See you soon!", 
+                "Bye! Feel free to reach out anytime.",
+                "Have a great day!",
+                "Thanks for chatting. Goodbye!",
+                "Take care and stay well!",
+                "Until next time!"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "thanks",
+            "patterns": [
+                "Thanks", 
+                "Thank you", 
+                "That's helpful", 
+                "Awesome, thanks", 
+                "Thanks for your help",
+                "Much appreciated",
+                "You're awesome",
+                "Appreciate it",
+                "Thank you so much",
+                "Nice one"
+            ],
+            "responses": [
+                "Happy to help!", 
+                "Anytime!", 
+                "You're welcome!",
+                "Glad I could assist you.",
+                "It's my pleasure!",
+                "Always here to help.",
+                "No problem at all.",
+                "Delighted I could be of service."
+            ],
+            "context": [""]
+        },
+        
+        
+        {
+          "tag": "login",
+          "patterns": [
+            "How do I log in?",
+              "Where can I log in?",
+              "I want to log in",
+              "Please help me to log in",
+              "Guide me how to login"
+          ],
+          "responses": [
+              "To log in, click the **Login** button in the top navigation bar.",
+              "You can access the login page by selecting the **Login** option from the navbar at the top.",
+              "Please use the **Login** button in the navigation bar to proceed to the login page."
+          ],
+          "context": ["login_redirect"]
+        },
+        {
+            "tag": "technical_support",
+            "patterns": [
+                "I'm having technical issues",
+                "Website not working",
+                "Can't log in",
+                "Error message",
+                "Technical problem",
+                "System glitch",
+                "Need tech help",
+                "Experiencing difficulties"
+            ],
+            "responses": [
+                "I'm sorry you're experiencing technical issues. Can you describe the problem in more detail?",
+                "Let's troubleshoot your technical concern. What specific error are you seeing?",
+                "Technical difficulties can be frustrating. Please provide more information about the issue.",
+                "Our support team is ready to help. What seems to be the problem?",
+                "Could you share more details about the technical issue you're facing?"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "service_unavailable",
+            "patterns": [
+                "Service not available",
+                "Feature not working",
+                "Can't access service",
+                "Broken functionality",
+                "Service down",
+                "Unable to use feature"
+            ],
+            "responses": [
+                "We apologize for the service interruption. Our team is working to resolve this quickly.",
+                "Thank you for bringing this to our attention. We'll investigate the service unavailability.",
+                "We're experiencing temporary service issues. Please try again later or contact support.",
+                "Our technical team has been notified about the service problem.",
+                "We appreciate your patience while we work on restoring the service."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "cold",
+            "patterns": [
+                "I have a cold",
+                "I'm sneezing a lot",
+                "My nose is blocked",
+                "I have a runny nose",
+                "I am feeling congested",
+                "What should I do for a cold?",
+                "How can I relieve a cold?",
+                "I have a stuffy nose"
+            ],
+            "responses": [
+                "For a cold, rest and stay hydrated. Drink plenty of fluids like water, tea, and soups.",
+                "Try steam inhalation to help clear your nasal passages and relieve congestion.",
+                "Over-the-counter medications like antihistamines or decongestants can help with cold symptoms.",
+                "You can also use a saline nasal spray or a neti pot to clear your nose.",
+                "Avoid exposure to cold air and take a warm shower to help soothe your symptoms.",
+                "If your symptoms persist for more than a week or worsen, consider seeing a doctor."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "fever",
+            "patterns": [
+                "I have a fever",
+                "I'm feeling hot",
+                "I am running a fever",
+                "What should I do for a fever?",
+                "My temperature is high",
+                "I feel feverish",
+                "I have chills and fever",
+                "How do I treat a fever?"
+            ],
+            "responses": [
+                "If you have a fever, make sure to stay hydrated. Drink plenty of fluids like water, herbal teas, or an electrolyte solution.",
+                "Take rest and try to keep your body cool by using a fan or applying a damp cloth to your forehead.",
+                "You can take paracetamol or ibuprofen to help lower your fever, but make sure to follow the recommended dosage.",
+                "If the fever persists for more than 48 hours or exceeds 103°F (39.4°C), it's best to consult a doctor.",
+                "Avoid wearing too many layers of clothes. Keep your room temperature comfortable.",
+                "A fever is usually a sign that your body is fighting an infection. Rest and take care of yourself. If you experience severe symptoms, seek medical help."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "cough",
+            "patterns": [
+                "I have a cough",
+                "I'm coughing a lot",
+                "My throat is sore and I'm coughing",
+                "What should I do for a cough?",
+                "I can't stop coughing",
+                "How can I relieve my cough?",
+                "I have a dry cough",
+                "I have a cough with mucus"
+            ],
+            "responses": [
+                "For a dry cough, try taking a spoonful of honey or a warm drink like tea with honey to soothe your throat.",
+                "Stay hydrated to help keep your throat moist. Drink plenty of fluids like water or herbal teas.",
+                "If your cough is due to mucus, using a saline nasal spray or doing steam inhalation can help clear your airways.",
+                "Over-the-counter cough syrups can help manage a cough, but make sure to follow the dosage instructions.",
+                "If your cough lasts more than a week or is accompanied by fever, chest pain, or difficulty breathing, consult a doctor.",
+                "Try using a humidifier in your room to keep the air moist and help soothe your throat."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "headache",
+            "patterns": [
+                "I have a headache",
+                "My head hurts",
+                "I feel a lot of pressure in my head",
+                "I'm experiencing a migraine",
+                "What should I do for a headache?",
+                "How can I relieve a headache?",
+                "I have a throbbing headache",
+                "My head is pounding"
+            ],
+            "responses": [
+                "For a headache, try taking over-the-counter pain relievers like ibuprofen or acetaminophen.",
+                "Rest in a quiet and dark room to help reduce the intensity of your headache.",
+                "Applying a cold compress to your forehead or neck may also help alleviate the pain.",
+                "Stay hydrated, as dehydration can sometimes cause headaches.",
+                "If your headache is a migraine, try lying down in a dark room and avoid any triggers like loud noises or bright lights.",
+                "If the headache persists for more than a few days or is accompanied by other symptoms like nausea or dizziness, consult a doctor."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "back_pain",
+            "patterns": [
+                "I have back pain",
+                "My back hurts",
+                "I feel pain in my lower back",
+                "I have a stiff back",
+                "What should I do for back pain?",
+                "How can I relieve my back pain?",
+                "I have a sore back",
+                "My back is aching"
+            ],
+            "responses": [
+                "For back pain, try resting and avoiding heavy lifting or strenuous activities.",
+                "Applying a warm compress or heating pad to the affected area may help relax the muscles.",
+                "Gentle stretching exercises can improve flexibility and reduce discomfort in the back.",
+                "Over-the-counter pain relievers like ibuprofen or acetaminophen can help manage the pain.",
+                "If the pain persists for more than a few days or is severe, consider seeing a healthcare professional for a proper diagnosis.",
+                "In some cases, physical therapy or chiropractic care may be beneficial to address chronic back pain."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "vomiting",
+            "patterns": [
+                "I feel like vomiting",
+                "I'm throwing up",
+                "I have nausea",
+                "I can't stop vomiting",
+                "What should I do if I'm vomiting?",
+                "How can I stop vomiting?",
+                "I feel nauseous and I keep vomiting",
+                "I'm throwing up continuously"
+            ],
+            "responses": [
+                "If you're vomiting, try to stay hydrated by sipping small amounts of water or an electrolyte solution to prevent dehydration.",
+                "Avoid solid foods until the vomiting stops. Gradually introduce bland foods like crackers, toast, or rice once you feel better.",
+                "You can try anti-nausea medications like ondansetron, but it's best to consult a doctor for proper treatment.",
+                "Rest in a comfortable position and avoid any strong smells or triggers that may worsen the nausea.",
+                "If vomiting persists for more than 24 hours, or if you're unable to keep any liquids down, seek medical attention.",
+                "Severe or frequent vomiting can be a sign of a more serious condition, so it's important to monitor your symptoms and consult a doctor if needed."
+            ],
+            "context": [""]
+        },
+        {   "tag": "symptom_check",
+            "patterns": [
+                "I have a headache",
+                "My stomach hurts",
+                "Feeling dizzy",
+                "I'm experiencing chest pain",
+                "Nausea and vomiting",
+                "Fever and chills",
+                "Check my symptoms",
+                "What could these symptoms mean?",
+                "Should I be worried about these symptoms?",
+                "I don't feel well",
+                "Having trouble breathing",
+                "Joint pain",
+                "Skin rash",
+                "Persistent cough",
+                "Sore throat",
+                "Back pain",
+                "Fatigue",
+                "Analyze my symptoms"
+            ],
+            "responses": [
+                "I understand you're not feeling well. While I can provide general information, I'm not a substitute for professional medical advice. Based on your symptoms, it's important to consult a healthcare provider for an accurate diagnosis.",
+                "Thank you for sharing your symptoms. For an accurate diagnosis and appropriate care, I recommend scheduling an appointment with a doctor.",
+                "I notice you're experiencing some concerning symptoms. The best course of action would be to consult with a medical professional for an accurate assessment.",
+                "Your symptoms might require medical attention. While I can't diagnose conditions, it's important to reach out to a healthcare provider.",
+                "For symptoms like these, it's best to consult with a healthcare professional to discuss your concerns."
+            ],
+            "context": ["appointment_prompt"]
+        },
+        {
+            "tag": "medical_emergency",
+            "patterns": [
+                "I think I'm having a heart attack",
+                "Severe bleeding",
+                "Unconscious person",
+                "Difficulty breathing emergency",
+                "Stroke symptoms",
+                "Seizure happening now",
+                "Severe allergic reaction",
+                "Emergency help",
+                "Need urgent medical assistance",
+                "Life-threatening situation"
+            ],
+            "responses": [
+                "This sounds like a medical emergency. Please call 911 or your local emergency number immediately. Do not wait for an online appointment.",
+                "Please call emergency services (911) right away. This requires immediate medical attention.",
+                "This appears to be an emergency situation. Please contact 911 or go to the nearest emergency room immediately.",
+                "For a situation like this, please call 911 now. Don't wait for an online response.",
+                "This requires immediate emergency care. Please call 911 or have someone take you to the emergency room right away."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "noanswer",
+            "patterns": [],
+            "responses": [
+                "Sorry, I couldn't understand that. Can you please rephrase?", 
+                "I'm not sure what you mean. Could you clarify?",
+                "Your message seems unclear. Could you provide more context?",
+                "I'm having trouble understanding. Can you explain in a different way?",
+                "Apologies, but I didn't catch that. Would you mind repeating?"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "flu",
+            "patterns": [
+              "I have the flu",
+              "I'm feeling sick with flu-like symptoms",
+              "I have body aches and chills",
+              "My throat hurts and I'm feeling tired",
+              "I have a fever and cough, could it be the flu?",
+              "What are the symptoms of the flu?"
+            ],
+            "responses": [
+              "The flu typically includes symptoms like fever, chills, body aches, sore throat, and fatigue. It's highly contagious, so make sure to rest and stay hydrated.",
+              "If you have flu symptoms, consider seeing a doctor for antiviral treatment, especially if the symptoms are severe or prolonged.",
+              "To alleviate flu symptoms, rest, drink fluids, and take over-the-counter medications for fever and body aches. However, if symptoms worsen, consult a doctor.",
+              "Make sure to wash your hands regularly and cover your mouth when coughing or sneezing to prevent the spread of the flu."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "asthma",
+            "patterns": [
+              "I have asthma",
+              "I'm having difficulty breathing",
+              "I'm wheezing and short of breath",
+              "What can I do for my asthma?",
+              "How can I manage asthma symptoms?"
+            ],
+            "responses": [
+              "If you're experiencing shortness of breath or wheezing, using your inhaler (if prescribed) may help. Make sure to follow your doctor's instructions for managing asthma.",
+              "Avoid asthma triggers such as allergens, smoke, and cold air. Try to stay in an environment with clean, humidified air.",
+              "For severe asthma symptoms or attacks, seek immediate medical attention. It's important to have a management plan set up with your doctor."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "hypertension",
+            "patterns": [
+              "I think I have high blood pressure",
+              "I'm feeling lightheaded and dizzy",
+              "What can I do for hypertension?",
+              "What are the symptoms of high blood pressure?",
+              "I'm concerned about my blood pressure levels"
+            ],
+            "responses": [
+              "Hypertension often doesn't show clear symptoms, but it can lead to serious health problems if untreated. It's important to regularly monitor your blood pressure.",
+              "To manage hypertension, follow a healthy diet low in sodium, exercise regularly, and take medications as prescribed by your doctor.",
+              "If you're feeling lightheaded or dizzy, it's important to seek medical advice. High blood pressure can be managed with lifestyle changes and medication."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "gastroenteritis",
+            "patterns": [
+              "I have stomach pain and diarrhea",
+              "I'm feeling nauseous and vomiting",
+              "Could I have gastroenteritis?",
+              "What are the symptoms of stomach flu?",
+              "I have a stomach bug"
+            ],
+            "responses": [
+              "Gastroenteritis, or stomach flu, often causes nausea, vomiting, diarrhea, and stomach cramps. Rest and staying hydrated are key to recovery.",
+              "Avoid solid foods until your stomach settles, and try drinking clear fluids like water or clear broths. If symptoms persist, consult with a healthcare provider.",
+              "If you're experiencing severe dehydration, fever, or prolonged symptoms, please seek medical attention as these could indicate a more serious condition."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "pneumonia",
+            "patterns": [
+              "I have a cough and chest pain",
+              "I have difficulty breathing and a fever",
+              "Could it be pneumonia?",
+              "I'm feeling short of breath and coughing up mucus",
+              "What are the symptoms of pneumonia?"
+            ],
+            "responses": [
+              "Pneumonia can cause symptoms such as cough, chest pain, shortness of breath, and fever. It's important to consult with a doctor if you experience these symptoms.",
+              "Pneumonia can be caused by infections and requires medical treatment. Antibiotics or antivirals may be necessary, depending on the type of infection.",
+              "If you're having difficulty breathing or your symptoms worsen, seek medical help immediately. Pneumonia can become severe without proper treatment."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "arthritis",
+            "patterns": [
+              "I have joint pain",
+              "My joints are swollen and stiff",
+              "I think I have arthritis",
+              "What should I do for arthritis pain?",
+              "How can I manage arthritis?"
+            ],
+            "responses": [
+              "Arthritis causes inflammation in the joints, leading to pain and stiffness. Treatment may include pain relief medications, physical therapy, and lifestyle changes.",
+              "For managing arthritis, regular exercise and maintaining a healthy weight can help reduce stress on the joints. Consult with your doctor for the best treatment plan.",
+              "If your joint pain is severe or persistent, you should visit a healthcare provider to explore possible treatments such as medication or joint therapy."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "allergies",
+            "patterns": [
+              "I'm having an allergic reaction",
+              "I have itchy eyes and sneezing",
+              "Could I have an allergy?",
+              "I'm allergic to pollen",
+              "What can I do for my allergies?"
+            ],
+            "responses": [
+              "Common allergy symptoms include itchy eyes, sneezing, and a runny nose. You can try over-the-counter antihistamines to relieve these symptoms.",
+              "If you're experiencing allergic reactions, avoiding the allergens is key. Consider using an air purifier and keeping windows closed during high pollen seasons.",
+              "For more severe allergic reactions, consult with a doctor about medications or allergy shots that can help you manage your symptoms."
+            ],
+            "context": [""]
+        } 
+    ]
+}
